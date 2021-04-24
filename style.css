@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+
+body{
+    background-image: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+  background-color: white;
+  max-width: 350px;
+  min-height:40vh;
+  padding:2rem;
+  box-shadow: 5px 5px 15px rgba( 0, 0, 0, 0.3);
+ /*15px de espalhamento da sombra*/
+    border-radius: 15px;
+}
+
+main h2{
+  font-weight:600;
+  margin-bottom: 1.5rem;
+  position:relative;
+}
+
+main h2::before {
+  content:'';
+  position:absolute;
+  height:3.5px;
+  width:25px;
+  bottom: 3px; /*quando usamos o POSITIONS conseguimos usar as pripriesades bottom, left, right e top*/
+  left:0;
+  border-radius:8px;
+  background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.input-field{
+  position:relative;
+}
+
+form .input-field:first-child{
+  margin-bottom: 1.5rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+
+body{
+    background-image: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+  background-color: white;
+  max-width: 350px;
+  min-height:40vh;
+  padding:2rem;
+  box-shadow: 5px 5px 15px rgba( 0, 0, 0, 0.3);
+ /*15px de espalhamento da sombra*/
+    border-radius: 15px;
+}
+
+main h2{
+  font-weight:600;
+  margin-bottom: 1.5rem;
+  position:relative;
+}
+
+main h2::before {
+  content:'';
+  position:absolute;
+  height:3.5px;
+  width:25px;
+  bottom: 3px; /*quando usamos o POSITIONS conseguimos usar as pripriesades bottom, left, right e top*/
+  left:0;
+  border-radius:8px;
+  background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.input-field{
+  position:relative;
+}
+
+form .input-field:first-child{
+  margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5;
+    left: 0;
+    background: rgba( 0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5;
+    left: 0;
+    background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+  transform: scalex(0);
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.input-field input:focus ~ .underline:after {
+/*o ~ seleciona o que virará quando estiver em FOCUS (no caso do form, quando clicarmos para escrever*/
+transform: scaleX(1);
+}
+
+.input-field input/*estilizar os inputs dentro da div INPUT FIELD*/ {
+   outline: none; 
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  
+}
+
+.input-field input::placeholder{
+  color: rgba(0, 0, 0, 0.7) 
+}
+
+form input[type="submit"]{
+/*seleciona o unico input com o tipo SUBMIT entre os inputs*/
+  margin-top:2rem;
+  padding:0.4rem;
+  background-image: linear-gradient(to left, #30cfd0 0%, #330867 100%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:7px;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover{
+  letter-spacing: 0.5px;
+  background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);  
+}
+
+.footer{
+ display:flex;
+ flex-direction:column;
+}
+
+.footer span{
+  margin-top: 1rem;
+  text-align:center;
+  color: rgba(0, 0, 0, 0.5) 
+}
+
+.footer .social-fields{
+
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width:100%;
+  cursor:ponter;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+}
+
+/*rever.footer .social-fields .twitter a i {
+  margin-left: 0 0.5px;
+  width: 15px;
+}*/
+
+
+
+.footer .social-fields a{
+  text-decoration: none;
+  color:white;
+
+
+}
+
+.footer .social-fields .twitter{
+ background: linear-gradient(to right, #56a7f2, #468aca);
+ padding: 0.5rem;
+ border-radius: 7px;
+ margin-bottom:1rem;
+
+}
+
+.footer .social-fields .facebook{
+ background: linear-gradient(to right, #1e3c72, #468aca);
+ padding: 0.5rem;
+ border-radius: 7px;
+}
+
+
+
+.input-field input/*estilizar os inputs dentro da div INPUT FIELD*/ {
+   outline: none; 
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  
+}
+
+.input-field input::placeholder{
+  color: rgba(0, 0, 0, 0.7) 
+}
+
+form input[type="submit"]{
+/*seleciona o unico input com o tipo SUBMIT entre os inputs*/
+  margin-top:2rem;
+  padding:0.4rem;
+  background-image: linear-gradient(to left, #30cfd0 0%, #330867 100%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:7px;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover{
+  letter-spacing: 0.5px;
+  background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);  
+}
+
+.footer{
+ display:flex;
+ flex-direction:column;
+}
+
+.footer span{
+  margin-top: 1rem;
+  text-align:center;
+  color: rgba(0, 0, 0, 0.5) 
+}
+
+.footer .social-fields{
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 75%;
+  cursor: ponter;
+  margin-top: 1px;
+  margin-bottom: 1rem;
+  margin-left: 33px;
+}
+
+/*rever.footer .social-fields .twitter a i {
+  margin-left: 0 0.5px;
+  width: 15px;
+}*/
+
+
+
+.footer .social-fields a{
+  text-decoration: none;
+  color:white;
+}
+
+.footer .social-fields a svg{
+margin: 0 0.5rem;
+width: 15px;
+  
+}
+
+
+.footer .social-fields .twitter{
+ background: linear-gradient(to right, #56a7f2, #468aca);
+ padding: 0.5rem;
+ border-radius: 7px;
+ margin-bottom:1rem;
+ cursor:pointer;
+}
+
+.footer .social-fields .facebook{
+ background: linear-gradient(to right, #1e3c72, #468aca);
+ padding: 0.5rem;
+ border-radius: 7px;
+ cursor:pointer;
+}
+
+
+
+
+
+
+
+
+  
+
+
